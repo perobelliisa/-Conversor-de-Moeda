@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de dólar para real</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conversão de dólar para real</h1>
+        <form action="/calcular_dolar" method="post">
+            <label for="Real">Valor em real (ex: 10,99):</label>
+            <input type="number" id="Real" name="real"  required>
+
+            <button type="submit">Converter</button>
+        </form>
+
+        {% if convertido %}
+        <div class="resultado">
+            <h2>Resultado da conversão</h2>
+            <p><strong>Dólares:</strong> {{ convertido }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
